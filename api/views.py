@@ -1,6 +1,5 @@
-from django.shortcuts import render
+
 from rest_framework import generics, status
-from torch import serialization
 from .serializers import RoomSerializer, CreateRoomSerializer,UpdateRoomSerializer
 from .models import Room
 from rest_framework.views import APIView
