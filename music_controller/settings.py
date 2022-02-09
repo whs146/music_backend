@@ -131,7 +131,7 @@ CORS_ORIGIN_ALLOW_ALL = True
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-CORS_ORIGIN_WHITELIST=["http://localhost:3000","https://musicbarss.herokuapp.com/","http://musicbarss.herokuapp.com/","https://musicbarss.herokuapp.com","http://musicbarss.herokuapp.com"]
+CORS_ORIGIN_WHITELIST=["http://localhost:3000","https://musicbars.herokuapp.com/","http://musicbars.herokuapp.com/","https://musicbars.herokuapp.com","http://musicbars.herokuapp.com"]
 
 DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 
