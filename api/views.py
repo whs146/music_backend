@@ -101,12 +101,12 @@ class CreateRoomView(APIView):
         if not self.request.session.exists(self.request.session.session_key):
             self.request.session.create()
        
-        serializer = self.serializer_class(data=request.data).save()
+        serializer = self.serializer_class(data=request.data)
         
-        print(serializer.is_valid())
+        
         
         if serializer.is_valid():
-            print(serializer.data)
+            serializer.save()
             guest_can_pause=serializer.data.get('guest_can_pause')
             votes_to_skip=serializer.data.get('votes_to_skip')
             print(guest_can_pause)
