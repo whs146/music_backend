@@ -103,7 +103,7 @@ class CreateRoomView(APIView):
        
         serializer = self.serializer_class(data=request.data)
         
-        print(serializer)
+        print(serializer.is_valid())
         
         if serializer.is_valid():
             print(serializer.data)
