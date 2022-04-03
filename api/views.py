@@ -102,7 +102,7 @@ class CreateRoomView(APIView):
             self.request.session.create()
        
         serializer = self.serializer_class(data=request.data)
-        
+        print(request.data)
         
         
         if serializer.is_valid():
