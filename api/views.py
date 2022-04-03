@@ -105,10 +105,13 @@ class CreateRoomView(APIView):
         serializer = CreateRoomSerializer(data=request.data)
         print(request.data)
        
-        
+        received_json_data=json.loads(request.body)
+        print( received_json_data)
         
         if serializer.is_valid():
             # serializer.save()
+            print(request.data.body)
+            print(request.data.body.get('guest_can_pause'))
             print(serializer.data)
             print(serializer.data.get('guest_can_pause'))
             print(serializer.data.get('votes_to_skip'))
