@@ -105,7 +105,7 @@ class CreateRoomView(APIView):
         serializer = CreateRoomSerializer(data=request.data)
         print(request.data)
        
-        received_json_data=json.loads(request.body)
+        received_json_data=json.loads(request.data.body)
         print( received_json_data)
         
         if serializer.is_valid():
