@@ -121,6 +121,7 @@ class CreateRoomView(APIView):
             print(guest_can_pause)
             print(votes_to_skip)
             host=self.request.session.session_key
+            print(host)
             queryset = Room.objects.filter(host=host)
             if queryset.exists():
                 room=queryset[0]
